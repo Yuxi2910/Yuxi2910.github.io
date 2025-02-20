@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine learning applications in weather prediction </title>
+
+    <h1>1.	Survey on the Application of Deep Learning in Extreme</h1>
+<p>Main objective: </p>
+<p>This article summarizes the previous research combined with deep learning to make a relatively complete summary of the prediction of extreme weather.
+
+<p>It summarizes and describes the key deep learning applications—BP (Back Propagation) Neural Network, Recurrent Neural Network, Convolutional Neural Network, and Capsule Neural Network in Extreme Weather.</p>
+
+For example, the BP algorithm is designed to consist of two processes—signal forward propagation (looking for loss) and error back propagation (error back propagation). The three-layer error back propagation algorithm model is the most commonly used in weather forecasting. It contains N nodes in the input layer, M nodes in the hidden layer, and P nodes in the output layer. Many literatures have used this method in forecasting different extreme events like wind speed. However, it states that given the complex cause of wind speed and other extreme weather, the traditional BP method can only describe parts or fragments of information, and it is difficult to understand its change rules and predict comprehensively and accurately. Nonetheless, Niu Zhijuan et al. and K Dou et al. further developed their models based on this traditional BP model, which greatly increased the accuracy.</p> 
+
+<p>The artificial neural network is a natural extension of a feedforward neural network
+in the sequence data processing. The difference is that its input not only includes the input
+examples currently seen. It also includes the information perceived by the network at the
+last minute. Using this attribute, information can circulate in the network for any
+length of time. It fully considers the characteristics of the motion state of the time
+series and improves the self-learning adaptive ability through network learning, so that it
+can better process sequential data. </p>
+
+<p>This summary of applications provides a starting point on which methods we can consider and rule out others. For instance, we could apply a capsule neural network if we have only limited data (as it can provide a good representation effect with small datasets) while the intuition behind the method is quite simple. If we can collect radar image sources, then it would be possible to consider using a recurrent neural network that identifies extreme patterns and include information perceived at the last minute. This may increase the likelihood of capturing sudden and irregular weather changes (e.g., cloudburst). </p>
+
+
+<h2>2.	Using recurrent neural networks for localized weather prediction with combined use of public airport data and on-site measurements</h2>
+<p>Main Objective: </p>
+<p>The primary goal of this study is to develop a methodology that leverages RNNs to generate synthetic localized weather data, thereby improving the accuracy of weather predictions for specific locations by combining publicly available airport weather data with on-site building monitoring data.</p>
+
+<p>Methodology and data collection:</p>
+Researchers first collected localized time-series data from the two main data streams—NSRDB airport data and on-site measurements (an airport station in Harvard Gund Hall). Then, RNNs were employed to model the temporal dependencies in the weather data, enabling the prediction of localized weather conditions based on historical data. The collected data are fitted to a Feedforward Neural Network (FFNN) and to various RNN model architectures, including a Long-Short Term Memory (LSTM) model, and a Gated Recurrent Unit (GRU) model. These models are also tested for improvement in various weather feature predictions (temperature, humidity, wind speed, and wind direction) against the measured ground-truth values.
+
+The training data comprises five months of data from both airport and the Harvard Gund Hall, from January to May. Subsequent data from May to June was utilized for model selection and tuning, and finally, data from July to December serves as the held-out test set against which the model prediction was validated. 
+
+<p>Limitations:</p>
+The limitations are well defined. The model applications are still constrained by data availability, the low-resolution time series training datasets, and other concerns, such as imputing missing values, incorporating various weather variables, etc. These issues may also arise during our model application process.
+
+The FFNN model assumes independence between inputs and outputs, which limits its ability to capture complex temporal dependencies. The LSTM model, designed to address long-term dependencies in sequential data, requires longer training sequences to improve accuracy and takes more time to train the data than the GRU model. 
+
+The study also investigated the Mean Squared Error (MSE) for different training dataset lengths. Their findings indicate that while a longer training period naturally improves prediction accuracy and lowers errors, the inflexion point occurs at around four months, where the error starts to dip below the base generic airport file. This suggests that finding the right time frame for training data is critical—too short a period may result in insufficient learning, while too long may lead to diminishing returns in accuracy improvements.
+
+<p>Findings:</p>
+It achieved a low mean square error of 2.96 and over 185% improvement in validation accuracy. Overall, the performance of selected models has shown over 100% improvements in test accuracy compared with standard weather files and weather station data at the nearest airport. Among the selected models, the GRU performed best across all parameters except for relative humidity, where the LSTM model prediction has a slightly lower MSE. They both outperformed standard FFNNs. The public airport data has high errors compared to actual on-site measurements, especially for relative humidity and wind direction. 
+
+<p>To our work:</p>
+This paper underscores the potential of combining diverse data sources with advanced neural network models to refine localized weather predictions. It suggests the need to use neural networks, which all provide more accurate predictions of on-site conditions than public airport data. Additionally, the proof of more accurate predictions at a local level suggests that we might consider using these applications since it is likely that the data available to us represents only local regions. 
+
+
+<h3>3.	Rainfall forecasting for the natural disasters preparation using recurrent neural networks</h3>
+<p>Main objective:</p>
+The primary goal of this study is to develop a rainfall forecasting model utilizing Recurrent Neural Networks (RNNs) to predict weekly rainfall, thereby enhancing preparedness for natural disasters such as floods.
+
+<p>Methodology and data collection:</p>
+The study obtained weekly data in the past ten years (2008-2017) from the Meteorology, Climatology, and Geophysics Agency (BMKG) in Bogor, focusing on three key meteorological variables: rainfall, temperature, and humidity. It then uses rainfall data history in Semarang over the last ten years. 
+
+An RNN model, specifically incorporating Long-Short-Term Memory (LSTM) units, was developed to capture temporal dependencies and patterns within sequential weather data. The training used LSTM to generalize climate data for the past ten years. The model was then compared with a convolutional neural network (CNN) model. Previous research has shown that RNNs usually have better accuracy for time series data such as rainfall. However, in this study, RNNs were better than CNNs in both accuracy and stability.
+
+<p>Finding:</p>
+From the ten years datasets, the RNN model outperforms the CNN model by resulting in a more than 96.07% accuracy of new data and more than 98% of training data, while the CNN has an accuracy of 81.37% for new data. Also, the RNN is better than CNN in terms of stability, that was a small Loss. This suggests the RNN model provides higher generalizability when predicting rainfalls.
+
+<p>Limitations:</p>
+The accuracy of the RNN model increases significantly over time, indicating the need for data that has a five- to ten-year time frame. 
+
+<p>To our work:</p>
+The data used for this study include variables similar to those used in cloudburst prediction, such as rainfall intensity, humidity, and temperature. The prediction of rainfall is very relevant to cloudburst, which is another form of rain. The use of RNNs with LSTM units will effectively capture long-term dependencies in weather data, which is crucial for improving short-term and long-term weather forecasts. 
+
+However, we might face the challenge of data availability. Since rainfall predictions rely heavily on historical time-series data, ensuring sufficient data availability will be crucial for model generalization. Similar to the study, a minimum time period for training data must be identified to balance accuracy and computational efficiency. The heavy reliance on historical data might be challenging for predicting cloudbursts that happen more irregularly and do not follow a historical pattern. Additionally, while RNN models perform better in terms of accuracy and stability, they require higher computational resources than simpler models such as GRUs or FFNNs. Our work may benefit from comparing different neural network architectures to determine the best trade-off between accuracy and efficiency.
+
+
+<h4>References:</h4>
+<p>Fang, W. et al. (2021) 'Survey on the Application of Deep Learning in Extreme Weather Prediction,' Atmosphere, 12(6), p. 661. https://doi.org/10.3390/atmos12060661.</p>
+
+<p>Han, J.M. et al. (2021) 'Using recurrent neural networks for localized weather prediction with combined use of public airport data and on-site measurements,' Building and Environment, 192, p. 107601. https://doi.org/10.1016/j.buildenv.2021.107601.</p>
+
+<p>Prasetya, Elvan P., and Esmeralda C. Djamal. "Rainfall forecasting for the natural disasters preparation using recurrent neural networks." 2019 International Conference on Electrical Engineering and Informatics (ICEEI). IEEE, 2019.</p>
+
+
+</body>
+</html>
