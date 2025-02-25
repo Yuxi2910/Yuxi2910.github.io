@@ -12,8 +12,6 @@ redirect_from:
 
 ## Research Interests
 - [Interest 1]
-- [Interest 2]
-- [Interest 3]
 
 ## QMSS Practicum Project
 [Building a cloudburst prediction machine learning model]
