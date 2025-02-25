@@ -11,26 +11,16 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Columbia University, Graduate School of Arts and Sciences MA in Quantitative Methods in Social Sciences
+New York, US | Sept.2024—Dec.2025 Expected
+* University of York Bachelor of Science in Economics; First Class Honours
+York, UK | Sept.2021—Jul.2024
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* INTERNSHIP  Shenzhen, PRC | Jul. 2023 – Sep. 2023
+Shenzhen Fortune Wisdom Venture Capital Co., Ltd.
+Medical and Healthcare Investment Team, Intern
   
 Skills
 ======
