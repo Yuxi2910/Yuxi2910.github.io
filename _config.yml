@@ -72,8 +72,8 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
+# Project Category - The following the list of project categories and their headings
+project_category:
   books:
     title: 'Books'
   manuscripts:

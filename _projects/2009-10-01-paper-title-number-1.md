@@ -2,6 +2,7 @@
 title: "Cloudburst Prediction Practicum Final Report"
 collection: projects
 category: manuscripts
+permalink: /project/2015-5-12-paper-title-number-1
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2025-5-12
 venue: 'Project 1'
